@@ -11,7 +11,7 @@ terraform {
   }
   required_version = "~> 1.0"
 
-  backend "remote" {
+  cloud {
     organization = "ACG_Terraform_Labs"
 
     workspaces {
