@@ -53,7 +53,7 @@ resource "aws_security_group" "web-sg" {
 }
 
 resource "aws_instance" "ec2-vm" {
-  ami                         = data.aws_ssm_parameter.linuxAmi.value
+  ami                         = "ami-09e67e426f25ce0d7"
   instance_type               = "t3.micro"
   associate_public_ip_address = true
   vpc_security_group_ids      = [aws_security_group.web-sg.id]
